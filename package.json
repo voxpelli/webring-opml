@@ -37,6 +37,8 @@
     "clean": "run-p clean:*",
     "prepare": "husky install",
     "prepublishOnly": "run-s build",
+    "test:run": "node cli.js test-output cssjoy",
+    "test-ci": "run-s test:*",
     "test": "run-s check"
   },
   "dependencies": {

@@ -12,3 +12,4 @@
 !/lib/advanced-types.d.ts
 
 # Library specific ones
+/test-output
