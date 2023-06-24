@@ -10,9 +10,8 @@ import { generateOpmlForWebring } from './index.js';
 const outDir = argv[2];
 const webringNames = argv.slice(3);
 
-console.log(webringNames, outDir);
 if (!outDir) {
-  console.error('Error: An out diris required');
+  console.error('Error: An out dir is required');
   process.exit(1);
 }
 
