@@ -35,6 +35,16 @@ You give it a specific folder in your Inoreader and it will target that one with
 
 ## Technical details
 
+### Generation
+
+The script pulls the webri.ng:s JSON list of sites for the specific webring: https://webri.ng/webring/cssjoy/sites
+
+It then loops through them all, fetched their respective URL:s and looks for a `<link rel="alternate" href="..." />` within the returned HTML (as specified in eg. [RSS Autodiscovery](https://www.rssboard.org/rss-autodiscovery) and documented in [posts across the web](https://blog.jim-nielsen.com/2021/automatically-discoverable-rss-feeds/)).
+
+If any such links are found, the first one is deemed to represent the page and included in the OPML file. If no such link is found, the site will be excluded from the OPML.
+
+### GitHub Actions workflow
+
 Uses [a GitHub Actions workflow](.github/workflows/gh-pages.yml) that's runs daily (+ whenever I push to `main` or trigger it manually).
 
 That workflow does two things:
