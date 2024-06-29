@@ -12,7 +12,7 @@
   "author": "Pelle Wessman <pelle@kodfabrik.se> (http://kodfabrik.se/)",
   "license": "MIT",
   "engines": {
-    "node": ">=18.0.0"
+    "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
   },
   "bin": "cli.js",
   "type": "module",
@@ -28,14 +28,14 @@
     "build:0": "run-s clean",
     "build:1-declaration": "tsc -p declaration.tsconfig.json",
     "build": "run-s build:*",
-    "check:installed-check": "installed-check -i @voxpelli/eslint-config -i eslint -i knip",
+    "check:installed-check": "installed-check",
     "check:knip": "knip",
     "check:lint": "eslint --report-unused-disable-directives .",
     "check:tsc": "tsc",
     "check": "run-s clean && run-p check:*",
     "clean:declarations": "rm -rf $(find . -maxdepth 2 -type f -name '*.d.ts*' ! -name 'advanced-types.d.ts')",
     "clean": "run-p clean:*",
-    "prepare": "husky install",
+    "prepare": "husky",
     "prepublishOnly": "run-s build",
     "test:run": "node cli.js test-output cssjoy",
     "test-ci": "run-s test:*",
@@ -50,10 +50,10 @@
     "@voxpelli/eslint-config": "^20.0.0-beta.4",
     "@voxpelli/tsconfig": "^9.0.0",
     "eslint": "^9.6.0",
-    "husky": "^8.0.3",
-    "installed-check": "^8.0.0",
-    "knip": "^2.35.0",
-    "npm-run-all2": "^6.1.1",
+    "husky": "^9.0.11",
+    "installed-check": "^9.3.0",
+    "knip": "^5.23.2",
+    "npm-run-all2": "^6.2.0",
     "typescript": "~5.2.2"
   }
 }
