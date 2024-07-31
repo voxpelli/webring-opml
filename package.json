@@ -47,9 +47,9 @@
   },
   "devDependencies": {
     "@types/node": "^20.14.9",
-    "@voxpelli/eslint-config": "^20.0.0-beta.4",
+    "@voxpelli/eslint-config": "^20.0.1",
     "@voxpelli/tsconfig": "^12.0.1",
-    "eslint": "^9.6.0",
+    "eslint": "^9.8.0",
     "husky": "^9.0.11",
     "installed-check": "^9.3.0",
     "knip": "^5.23.2",
