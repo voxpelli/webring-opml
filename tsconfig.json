@@ -1,14 +1,16 @@
 {
-  "extends": "@voxpelli/tsconfig/node18.json",
+  "extends": "@voxpelli/tsconfig/node22.json",
   "files": [
     "cli.js",
     "index.js"
   ],
   "include": [
     "lib/**/*",
-    "test/**/*",
+    "test/**/*"
   ],
   "compilerOptions": {
-    "skipLibCheck": true
+    "types": [
+      "node"
+    ]
   }
 }

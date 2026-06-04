@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 
-import got from 'got';
 import * as cheerio from 'cheerio';
+import got from 'got';
 
 const options = {
   timeout: {

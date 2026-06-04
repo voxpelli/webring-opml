@@ -12,7 +12,7 @@
   "author": "Pelle Wessman <pelle@kodfabrik.se> (http://kodfabrik.se/)",
   "license": "MIT",
   "engines": {
-    "node": "^20.9.0 || >=21.1.0"
+    "node": "^22.22.2 || ^24.15.0 || >=26.0.0"
   },
   "bin": "cli.js",
   "type": "module",
@@ -25,35 +25,35 @@
     "index.d.ts.map"
   ],
   "scripts": {
+    "build": "run-s build:*",
     "build:0": "run-s clean",
     "build:1-declaration": "tsc -p declaration.tsconfig.json",
-    "build": "run-s build:*",
+    "check": "run-s clean && run-p check:*",
     "check:installed-check": "installed-check",
     "check:knip": "knip",
     "check:lint": "eslint --report-unused-disable-directives .",
     "check:tsc": "tsc",
-    "check": "run-s clean && run-p check:*",
-    "clean:declarations": "rm -rf $(find . -maxdepth 2 -type f -name '*.d.ts*' ! -name 'advanced-types.d.ts')",
     "clean": "run-p clean:*",
+    "clean:declarations": "rm -rf $(find . -maxdepth 2 -type f -name '*.d.ts*' ! -name 'advanced-types.d.ts')",
     "prepare": "husky",
     "prepublishOnly": "run-s build",
+    "test": "run-s check test:*",
     "test:run": "node cli.js test-output cssjoy",
-    "test-ci": "run-s test:*",
-    "test": "run-s check test:*"
+    "test-ci": "run-s test:*"
   },
   "dependencies": {
-    "cheerio": "^1.0.0-rc.12",
-    "got": "^14.4.7"
+    "cheerio": "^1.2.0",
+    "got": "^15.0.5"
   },
   "devDependencies": {
-    "@types/node": "^20.17.32",
-    "@voxpelli/eslint-config": "^23.0.0",
-    "@voxpelli/tsconfig": "^15.1.2",
-    "eslint": "^9.25.1",
-    "husky": "^9.1.4",
-    "installed-check": "^9.3.0",
-    "knip": "^5.50.5",
-    "npm-run-all2": "^7.0.0",
-    "typescript": "~5.8.0"
+    "@types/node": "^22.19.19",
+    "@voxpelli/eslint-config": "^25.1.0",
+    "@voxpelli/tsconfig": "^16.2.1",
+    "eslint": "^9.39.4",
+    "husky": "^9.1.7",
+    "installed-check": "^10.0.1",
+    "knip": "^6.15.0",
+    "npm-run-all2": "^9.0.1",
+    "typescript": "~6.0.3"
   }
 }
