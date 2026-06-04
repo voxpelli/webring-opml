@@ -12,7 +12,7 @@
   "author": "Pelle Wessman <pelle@kodfabrik.se> (http://kodfabrik.se/)",
   "license": "MIT",
   "engines": {
-    "node": "^22.13.0 || >=24"
+    "node": "^22.22.2 || ^24.15.0 || >=26.0.0"
   },
   "bin": "cli.js",
   "type": "module",
@@ -52,8 +52,8 @@
     "eslint": "^9.39.4",
     "husky": "^9.1.7",
     "installed-check": "^10.0.1",
-    "knip": "^5.88.1",
-    "npm-run-all2": "^8.0.4",
+    "knip": "^6.15.0",
+    "npm-run-all2": "^9.0.1",
     "typescript": "~6.0.3"
   }
 }
