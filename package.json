@@ -54,6 +54,6 @@
     "installed-check": "^10.0.1",
     "knip": "^6.15.0",
     "npm-run-all2": "^9.0.1",
-    "typescript": "~6.0.3"
+    "typescript": "~7.0.0"
   }
 }
