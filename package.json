@@ -48,12 +48,12 @@
   "devDependencies": {
     "@types/node": "^22.19.19",
     "@voxpelli/eslint-config": "^25.1.0",
-    "@voxpelli/tsconfig": "^16.2.1",
+    "@voxpelli/tsconfig": "^17.0.0",
     "eslint": "^9.39.4",
     "husky": "^9.1.7",
     "installed-check": "^10.0.1",
     "knip": "^6.15.0",
     "npm-run-all2": "^9.0.1",
-    "typescript": "~6.0.3"
+    "typescript": "~7.0.0"
   }
 }
